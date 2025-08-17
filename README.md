@@ -15,8 +15,7 @@ A simple **PHP web application** to check whether a given word is a palindrome. 
 
 ## 💻 Demo
 
-![Palindrome Checker Screenshot](screenshot.png)
-*Replace `screenshot.png` with your app screenshot.*
+![Palindrome Checker Screenshot](image.png)
 
 ---
 
