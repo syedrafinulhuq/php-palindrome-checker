@@ -19,6 +19,13 @@ A simple **PHP web application** to check whether a given word is a palindrome. 
 
 ---
 
+# 🔗 Live View
+
+You can check out the live version of the app here:  
+👉 [Palindrome Checker](https://php-palindrome-checker.onrender.com)
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
