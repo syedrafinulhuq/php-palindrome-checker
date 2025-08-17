@@ -10,9 +10,8 @@ WORKDIR /var/www/html
 # Copy app files into container
 COPY public/ /var/www/html/
 
-# Copy other necessary files (CSS, assets, src, etc.)
+# Copy src if needed
 COPY src/ /var/www/html/src/
-COPY style.css /var/www/html/
 
 # Expose port 8080 for Render (Render routes traffic to 8080 internally)
 EXPOSE 8080
