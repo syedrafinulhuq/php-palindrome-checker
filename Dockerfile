@@ -1,23 +1,12 @@
-# Use the official PHP image with Apache
-FROM php:8.2-apache
+FROM php:8.3-cli-alpine
 
-# Set working directory
-WORKDIR /var/www/html
+WORKDIR /app
 
-# Copy project files to the container
-COPY . /var/www/html
+# Copy everything to the container
+COPY . /app
 
-# Install required PHP extensions (if any)
-RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
-
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
-
-# Expose port 10000 (Render uses port 10000 for web services)
+# Expose the port (optional, Render uses PORT env)
 EXPOSE 10000
 
-# Set environment variables for Render
-ENV PORT=10000
-
-# Start Apache in the foreground
-CMD ["apache2-foreground"]
+# Run PHP built-in server with 'public' as the document root
+CMD ["sh", "-lc", "php -S 0.0.0.0:${PORT:-10000} -t /app/public"]
