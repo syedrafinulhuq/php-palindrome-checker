@@ -1,0 +1,16 @@
+{
+  "name": "php-tailwind-daisyui-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/style.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "daisyui": "^4.0.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0"
+  }
+}
